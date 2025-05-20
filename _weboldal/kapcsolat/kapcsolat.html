@@ -1,0 +1,39 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="kapcsolat.css" />
+ </head>
+ <body>
+    <div class="wrapper">
+        <nav>
+                <ul>
+                    <li><button onclick="closeWindow(); return false;"></href=>Vissza a főoldalra</button></li>
+                </ul>
+            </nav>
+
+        <header>
+            <h3>Kapcsolat</h3>
+            <p>Kérdéseiddel az alábbi form kitöltésével fordulhatsz hozzám!</p>
+        </header>
+
+        <section id="contact">
+        <form id="contactForm">
+            <input type="text" placeholder="Név" required />
+            <input type="email" placeholder="Email" required />
+            <textarea placeholder="Üzenet" required></textarea>
+            <button type="submit">Küldés</button>
+        </form>
+            <p id="formMessage"></p>
+        </section>
+
+        <footer>
+            <p>© 2025 Ritz András</p>
+        </footer>
+
+        <script src="kapcsolat.js"></script>
+    </div>
+ </body>
+ </html>
