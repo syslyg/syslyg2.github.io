@@ -15,26 +15,21 @@
 
         <nav>
             <ul>
-            <li><a href="#about">Rólam</a></li>
-            <li><a href="#portfolio">Portfólió</a></li>
-            <li><a href="_weboldal/kapcsolat/kapcsolat2.html" target="_blank" onclick="openKapcsolat(); return false;">Kapcsolat</a></li>
+            <li><button class="navbar" id="homeBtn" onclick="betolt('_weboldal/home.html')">Kezdőlap</button></li>
+            <li><button class="navbar" onclick="betolt('_weboldal/projektek/projektek.html')">Projektek</button></li>
+            <li><button class="navbar" onclick="betolt('_weboldal/rolam.html')">Rólam</button></li>
+            <li><button class="navbar" target="_blank" onclick="openKapcsolat(); return false;">Kapcsolat</button></li>
             </ul>
         </nav>
+        <main>
+            <section class="tartalom">
+                <div id="tartalom"></div>
+            </section>
 
-        <section id="about">
-            <h2>Rólam</h2>
-            <p></p>
-        </section>
-
-        <section id="portfolio">
-            <h2>Portfólió</h2>
-            <div class="gallery">
-            <div class="item">Projekt 1</div>
-            <div class="item">Projekt 2</div>
-            <div class="item">Projekt 3</div>
-            </div>
-        </section>
-
+            <section class="projektek">
+                <div id="projekt"></div>
+            </section>
+        </main>        
         <footer>
             <p>© 2025 Ritz András</p>
         </footer>
