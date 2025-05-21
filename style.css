@@ -31,6 +31,21 @@ div ul {
   margin: 0;
 }
 
+.center {
+  text-align: center;
+}
+
+.c {
+  flex-direction: column;
+  background: #f2f2f2;
+}
+
+.li {
+  color: #333;
+  display: list-item;
+  padding: 3px;
+}
+
 nav a {
   color: white;
   text-decoration: none;
@@ -38,8 +53,18 @@ nav a {
 }
 
 section {
-  padding: 2rem;
+  padding-top: 2rem;
   max-width: 900px;
+}
+
+.txt {
+  text-align: justify;
+  font-family: Palatino Linotype;
+  padding-bottom: 0;
+}
+
+.no-margin {
+  margin: 0 !important;
 }
 
 .tartalom {
@@ -47,7 +72,8 @@ section {
 }
 
 .projektek {
-  margin: 0 auto 60px auto; 
+  margin: 0 auto 60px auto;
+  padding: 0; 
 }
 
 button {
@@ -101,4 +127,8 @@ main {
 
 #projekt.vanSzoveg {
   background: #333;
+}
+
+img {
+  max-width: 100%;
 }

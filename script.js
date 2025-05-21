@@ -12,6 +12,19 @@ function openKapcsolat() {
   );
 }
 
+function openBootstrapCarousel() {
+  const width = 800;
+  const height = 601;
+  const left = (screen.width - width) / 2;
+  const top = (screen.height - height) / 2;
+
+  window.open(
+    "_weboldal/bootstrap.html",
+    "BootstrapCarousel",
+    `width=${width},height=${height},left=${left},top=${top},resizable=no`
+  );
+}
+
 let aktualisFajl = "";
 
 function betolt(fajlNev) {
@@ -41,23 +54,23 @@ function betolt(fajlNev) {
 }
 
 function projekt_betolt(fajlNev) {
-  const projektDiv = document.getElementById("projekt");
-
   fetch(fajlNev)
     .then(response => {
       if (!response.ok) throw new Error("Hiba történt a fájl betöltésekor.");
       return response.text();
     })
     .then(szoveg => {
-      document.getElementById("projekt").innerHTML = szoveg;
-      if (szoveg.trim() !== "") {
-        projektDiv.classList.add("vanSzoveg");
-        } else {
-        projektDiv.classList.remove("vanSzoveg");
-        }
+      const projektDiv = document.getElementById("projekt");
+      const aboutSection = document.getElementById("about");
+
+      if (projektDiv) {
+        projektDiv.innerHTML = szoveg;
+        projektDiv.classList.add("vanSzoveg")
+      }
     })
     .catch(error => {
-      document.getElementById("projekt").innerHTML = "Nem sikerült betölteni az adatokat.";
+      const projektDiv = document.getElementById("projekt");
+      if (projektDiv) projektDiv.innerHTML = "Nem sikerült betölteni az adatokat.";
       console.error(error);
     });
 }

@@ -9,23 +9,22 @@
 <body>
     <div class="wrapper">
         <header>
-            <h1>Ritz András</h1>
-            <p>BME Ipari Termék- és Formatervező Bsc második féléves hallgatója</p>
+            <h1>Hallgatói weboldal</h1>
+            <p>Készült a 2024/25/2 félévben, a Webes megjelenítési technikák tantárgy keretein belül.</p>
         </header>
-
         <nav>
             <ul>
-            <li><button class="navbar" id="homeBtn" onclick="betolt('_weboldal/home.html')">Kezdőlap</button></li>
-            <li><button class="navbar" onclick="betolt('_weboldal/projektek/projektek.html')">Projektek</button></li>
-            <li><button class="navbar" onclick="betolt('_weboldal/rolam.html')">Rólam</button></li>
-            <li><button class="navbar" target="_blank" onclick="openKapcsolat(); return false;">Kapcsolat</button></li>
+                <li><button class="navbar" id="homeBtn" onclick="betolt('_weboldal/home.html')">Kezdőlap</button></li>
+                <li><button class="navbar" onclick="betolt('_weboldal/rolam.html')">Rólam</button></li>
+                <li><button class="navbar" onclick="betolt('_weboldal/projektek/projektek.html')">Projektek</button></li>
+                <li><button class="navbar" onclick="openBootstrapCarousel(); return false">Linkek</button></li>
+                <li><button class="navbar" target="_blank" onclick="openKapcsolat(); return false;">Kapcsolat</button></li>
             </ul>
         </nav>
         <main>
-            <section class="tartalom">
+            <section class="tartalom" id="about">
                 <div id="tartalom"></div>
             </section>
-
             <section class="projektek">
                 <div id="projekt"></div>
             </section>
@@ -33,7 +32,6 @@
         <footer>
             <p>© 2025 Ritz András</p>
         </footer>
-
         <script src="script.js"></script>
     </div>
 </body>
